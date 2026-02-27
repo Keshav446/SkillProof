@@ -33,8 +33,23 @@ OpenAI API
 dotenv for environment management
 CORS middleware
 
-🔗 Vercel Deployment:
-https://your-vercel-link.com
+🔗 Smart Contract Details
+
+Network: Monad Testnet
+
+Contract Address:"0xe006909848f966Aab8CB44381DDC5AFAFC03Aa14"
+
+Main Function- function addSkill(string memory name, string memory level) public;
+
+🤖 AI Integration (OpenAI) Skill evaluation and resume generation are powered by OpenAI.
+
+🖥️ Live Demo Frontend (Vercel)
+
+🔗 https://skill-proof-pi.vercel.app/
+
+Backend (Render)
+
+🔗 https://skillproof-bl37.onrender.com/
 
 📌 Project Motivation
 SkillProof explores how AI + blockchain-inspired transparency can improve trust in digital resumes and skill validation.
