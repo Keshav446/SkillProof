@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SkillProof Analytics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{
+  background: radial-gradient(circle at top, #020617, #000);
+  color:#fff;
+  padding:30px;
+}
+.container{max-width:1100px;margin:auto}
+.title{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+.card{
+  background:rgba(255,255,255,0.06);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 0 30px rgba(56,189,248,0.1);
+}
+.card h3{font-size:14px;color:#38bdf8}
+.card p{font-size:26px;font-weight:700;margin-top:5px}
+.chart-box{
+  background:rgba(255,255,255,0.05);
+  border-radius:16px;
+  padding:20px;
+  margin-top:25px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">📊 SkillProof Analytics Dashboard</div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Skills</h3>
+      <p id="totalSkills">0</p>
+    </div>
+    <div class="card">
+      <h3>Average Confidence</h3>
+      <p id="avgConfidence">0%</p>
+    </div>
+    <div class="card">
+      <h3>PoL Score</h3>
+      <p id="polScore">0</p>
+    </div>
+    <div class="card">
+      <h3>Top Skill</h3>
+      <p id="topSkill">-</p>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <canvas id="skillChart"></canvas>
+  </div>
+
+</div>
+
+<script src="analytics.js"></script>
+</body>
+</html>

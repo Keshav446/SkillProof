@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkillProof Resume</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="resume-body">
+
+  <!-- TOP BAR -->
+  <header class="resume-topbar">
+    <div class="logo">SkillProof</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Resume</a>
+    </nav>
+  </header>
+
+  <!-- RESUME PAGE -->
+  <main class="resume-page">
+
+    <!-- LEFT COLUMN -->
+    <aside class="resume-left">
+      <h2>SkillProof User</h2>
+      <p class="subtitle">AI + Blockchain Verified</p>
+
+      <section>
+        <h3>Verified Skills</h3>
+        <ul id="skillsList"></ul>
+      </section>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <section class="resume-right">
+      <h1>Professional Summary</h1>
+
+      <div id="aiResume" class="resume-text">
+        Generating AI resume...
+      </div>
+    </section>
+    <button class="build-resume-btn" onclick="window.location.href='resume-template.html'">
+      📄 Build Resume (Template View)
+    </button>
+    <button onclick="openAnalytics()" class="resume-btn">
+  📊 View Skill Analytics
+</button>
+
+
+  </main>
+  <link rel="stylesheet" href="resume.css">
+
+  <footer class="resume-footer">
+    SkillProof • On-Chain Resume
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

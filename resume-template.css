@@ -1,0 +1,111 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body {
+  background: linear-gradient(135deg, #c7d2fe, #ecfeff, #d1fae5);
+  padding: 40px 0;
+}
+
+/* ===== RESUME WRAPPER ===== */
+.sp-resume {
+  width: 900px;
+  margin: auto;
+  background: #ffffff;
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.sp-left {
+  width: 280px;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 32px 26px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  background: #22c55e;
+  color: #022c22;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.sp-left h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 18px;
+}
+
+.contact p {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.sp-left h3 {
+  margin-top: 22px;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+}
+
+.sp-left ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sp-left li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* ===== RIGHT CONTENT ===== */
+.sp-right {
+  flex: 1;
+  padding: 40px 44px;
+  color: #111827;
+}
+
+.sp-right section {
+  margin-bottom: 28px;
+}
+
+.sp-right h3 {
+  font-size: 18px;
+  border-bottom: 2px solid #22c55e;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.sp-right p {
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+.sp-right ul {
+  padding-left: 18px;
+}
+
+.sp-right li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}

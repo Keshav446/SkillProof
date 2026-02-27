@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 1100px;
+  padding: 14px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #22c55e, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e5e7eb;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #22c55e;
+}
+
+.github-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #020617 40%, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+/* ===== BACKGROUND GLOW ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37,99,235,0.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(34,197,94,0.25), transparent 40%);
+  z-index: -1;
+}
+
+/* ===== MAIN CARD ===== */
+.container {
+  width: 380px;
+  padding: 32px 30px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.tagline {
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 22px;
+  opacity: 0.85;
+}
+
+.tagline span {
+  background: linear-gradient(90deg, #22c55e, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 1px rgba(37,99,235,0.6);
+}
+
+textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c7d2fe;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Connect Wallet */
+button:first-of-type {
+  background: linear-gradient(135deg, #ffffff, #e5e7eb);
+  color: #020617;
+}
+
+button:first-of-type:hover {
+  transform: translateY(-2px);
+}
+
+/* Verify Button */
+.verify-btn,
+button:nth-of-type(2) {
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff;
+}
+
+.verify-btn:hover,
+button:nth-of-type(2):hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.4);
+}
+
+/* Resume Button */
+.resume-btn,
+button:last-of-type {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+}
+
+.resume-btn:hover,
+button:last-of-type:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(249,115,22,0.4);
+}
+
+/* ===== AI INFO BOX ===== */
+.ai-box {
+  margin: 22px 0 12px;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(34,197,94,0.15),
+    rgba(37,99,235,0.15)
+  );
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ===== WALLET STATUS ===== */
+#walletStatus {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #22c55e;
+  word-break: break-all;
+}
+
+/* ===== DASHBOARD / RESUME ===== */
+.dashboard {
+  width: 420px;
+  padding: 32px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.dashboard h3 {
+  margin: 14px 0 8px;
+  font-size: 15px;
+}
+
+#skillsList li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+#aiResume {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  opacity: 0.65;
+  text-align: center;
+  pointer-events: none;
+}
+.mcq {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.mcq label {
+  display: block;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00ffd5, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: #b5c7d3;
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-buttons button,
+.btn-outline {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-buttons button {
+  background: linear-gradient(135deg, #00ffd5, #00aaff);
+  color: black;
+}
+
+.btn-outline {
+  border: 1px solid #00ffd5;
+  color: #00ffd5;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: #00ffd5;
+  color: black;
+}
+.demo {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.demo h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00ffd5;
+}
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #020617 40%, #0f172a);
+  color: #e5e7eb;
+}
+
+/* BACKGROUND GLOW */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(37,99,235,0.25), transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(34,197,94,0.25), transparent 40%);
+  z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  padding: 14px 28px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #22c55e, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e7eb;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #22c55e;
+}
+
+.github-btn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.main-layout {
+  max-width: 1200px;
+  margin: 140px auto 80px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+}
+
+/* ================= LEFT PANEL ================= */
+.info-panel h1 {
+  font-size: 44px;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.features li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* AI BOX */
+.ai-box {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(34,197,94,0.18),
+    rgba(37,99,235,0.18)
+  );
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================= RIGHT PANEL ================= */
+.action-panel {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 32px;
+  border-radius: 20px;
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.action-panel input,
+.action-panel textarea {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.action-panel textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.action-panel input::placeholder,
+.action-panel textarea::placeholder {
+  color: #c7d2fe;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 18px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.wallet-btn {
+  background: linear-gradient(135deg, #ffffff, #e5e7eb);
+  color: #020617;
+}
+
+.verify-btn {
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff;
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= WALLET STATUS ================= */
+#walletStatus {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #22c55e;
+  word-break: break-all;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .info-panel h1 {
+    font-size: 36px;
+  }
+}

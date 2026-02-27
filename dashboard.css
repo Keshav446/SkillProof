@@ -1,0 +1,168 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BODY ================= */
+body.resume-body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #020617 40%, #0f172a);
+  color: #e5e7eb;
+}
+
+/* ================= TOP BAR ================= */
+.resume-topbar {
+  height: 64px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.resume-topbar .logo {
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(90deg,#22c55e,#2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-topbar nav a {
+  margin-left: 24px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #cbd5f5;
+  opacity: 0.85;
+}
+
+.resume-topbar nav a:hover {
+  opacity: 1;
+  color: #22c55e;
+}
+
+/* ================= PAGE LAYOUT ================= */
+.resume-page {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+}
+
+/* ================= LEFT COLUMN ================= */
+.resume-left {
+  border-right: 1px solid rgba(255,255,255,0.08);
+  padding-right: 28px;
+}
+
+.resume-left h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.resume-left .subtitle {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 28px;
+}
+
+.resume-left h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.resume-left ul {
+  list-style: none;
+}
+
+.resume-left li {
+  font-size: 13px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* ================= RIGHT COLUMN ================= */
+.resume-right h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.resume-text {
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  max-width: 820px;
+  opacity: 0.95;
+}
+
+/* ================= BUILD RESUME BUTTON ================= */
+.build-resume-btn {
+  grid-column: 2 / 3;
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff;
+  width: fit-content;
+}
+
+.build-resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.35);
+}
+
+/* ================= FOOTER ================= */
+.resume-footer {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+  padding-bottom: 24px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .resume-page {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-left {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .build-resume-btn {
+    grid-column: 1 / -1;
+  }
+}
+/* ===== FIX: Resume Summary Text Color ===== */
+
+.resume-right {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 32px;
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+}
+
+.resume-right h1 {
+  color: #e5e7eb;
+}
+
+.resume-text {
+  background: #ffffff;
+  color: #111827;        /* 🔥 BLACK TEXT */
+  padding: 18px 20px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkillProof AI</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="navbar">
+    <div class="nav-logo">SkillProof</div>
+
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Verify</a>
+      <a href="dashboard.html">Resume</a>
+      <a href="https://github.com/pl743/SkillProof" target="_blank" class="github-btn">
+        GitHub
+      </a>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN LAYOUT ================= -->
+  <main class="main-layout">
+
+    <!-- LEFT INFO PANEL -->
+    <section class="info-panel">
+      <h1>SkillProof AI</h1>
+
+      <p class="subtitle">
+        Prove your skills using <b>AI</b> and permanently secure them on the
+        <b>Monad Blockchain</b>.
+      </p>
+
+      <ul class="features">
+        <li>✅ AI-based skill evaluation</li>
+        <li>⛓️ On-chain verification (Monad)</li>
+        <li>🦊 MetaMask integration</li>
+        <li>📄 Auto-generated resume</li>
+      </ul>
+
+      <div class="ai-box">
+        <b>AI Skill Validation 🤖</b><br>
+        Answer honestly — AI evaluates your understanding
+      </div>
+    </section>
+
+    <!-- RIGHT ACTION PANEL -->
+    <section class="action-panel">
+      <button class="wallet-btn" onclick="connectWallet()">🔗 Connect Wallet</button>
+      <p id="walletStatus"></p>
+
+      <input
+        id="skillInput"
+        placeholder="Enter skill (e.g. DSA, React, Solidity)"
+      />
+
+      <textarea
+        id="skillDesc"
+        placeholder="Explain how you know this skill"
+      ></textarea>
+
+      <button class="verify-btn" onclick="verifySkillOnChain()">
+        🚀 Verify Skill On-Chain
+      </button>
+
+      <button class="resume-btn" onclick="goToResume()">
+        📄 View My SkillProof Resume
+      </button>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    Built by <b>Skill-Aura</b> • <b>SkillProof</b>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
